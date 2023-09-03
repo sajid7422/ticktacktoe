@@ -60,11 +60,19 @@ function Winis(){
         wonshow.innerHTML =(`${TURN =="X" ? "O wins" :"X wins"} `);
     }
     if(Arraybox[2].innerHTML=="X" && Arraybox[4].innerHTML =="X" && Arraybox[6].innerHTML =="X" || Arraybox[2].innerHTML=="O" && Arraybox[4].innerHTML=="O" && Arraybox[6].innerHTML=="O"){
+        
         gamecard.style ="display :none"
         wonshow.style="display block"
         wonshow.innerHTML =(`${TURN =="X" ? "O wins" :"X wins"} `);    }
-   
+ 
+  else if (Arraybox.every(cell => cell.innerHTML === "X" || cell.innerHTML === "O")) {
+    gamecard.style = "display: none";
+    wonshow.style = "display: block";
+    wonshow.innerHTML = "It's a tie!";
 }
+}
+   
+
 
 
 
